@@ -76,4 +76,84 @@ def show_players(event=None):
     for i in range(len(people)):
         text += f"{i+1}.) {people[i]}<br>"
 
-    output_list.innerHTML = text
+   from js import document
+
+def check(event=None):
+    reg = document.querySelector('input[name="reg"]:checked')
+    med = document.querySelector('input[name="med"]:checked')
+    grade = document.getElementById("grade").value
+    section = document.getElementById("section").value
+
+    output_text = document.getElementById("output-text")
+    output_img = document.getElementById("output-img")
+
+    if reg is None or med is None:
+        output_text.innerText = "Please answer all questions"
+        output_img.src = ""
+
+    elif reg.value != "yes" or med.value != "yes":
+        output_text.innerText = "INELIGIBLE: Please make sure to register online and/or submit your medical clearance"
+        output_img.src = "red.jpg"
+
+    elif section == "sapphire":
+        output_text.innerText = f"G{grade} - Sapphire: Blue Bears. Congratulations!"
+        output_img.src = "blue.jpg"
+
+    elif section == "ruby":
+        output_text.innerText = f"G{grade} - Ruby: Red Bulldogs. Congratulations!"
+        output_img.src = "red.jpg"
+
+    elif section == "emerald":
+        output_text.innerText = f"G{grade} - Emerald: Green Hornets. Congratulations!"
+        output_img.src = "green.jpg"
+
+    elif section == "topaz":
+        output_text.innerText = f"G{grade} - Topaz: Yellow Tigers. Congratulations!"
+        output_img.src = "yellow.jpg"
+
+def sign_up():
+    confirmation = document.getElementById("confirm")
+
+    confirmation.innerText = "Account created. You may now log in using your credentials!"
+
+def show_players(event=None):
+    output_list = document.getElementById("output-list")
+
+    people = [
+        "Max Ancheta",
+        "Alonso Asuncion",
+        "Enzo Battung",
+        "Vic Buenvenida",
+        "Kayla Casul",
+        "Athena Catapang",
+        "Cade Chua",
+        "Zyan Eusebio",
+        "Rad Evangelio",
+        "Mara Fado",
+        "Kleiser Fermocil",
+        "Curt Fernando",
+        "Ethan Francia",
+        "Sophia Jimenez",
+        "Javi Mabilog",
+        "AC Mactal",
+        "Lei Magday",
+        "Yanna Moya",
+        "Zoe Mutia",
+        "Luis Nazareno",
+        "Ara Quinto",
+        "Inigo Romero",
+        "Kyler Santos",
+        "Jaedin Sarao",
+        "Briana Sy",
+        "Charlotte Sy",
+        "Jared Udono",
+        "KC Vida"
+    ]
+
+    text = ""
+    for i in range(len(people)):
+        text += f"{i+1}.) {people[i]}<br>"
+
+    output_list.innerText = f"{text}"
+
+
