@@ -38,38 +38,42 @@ def sign_up():
 
     confirmation.innerText = "Account created. You may now log in using your credentials!"
 
-def show_players():
+def show_players(event=None):
     output_list = document.getElementById("output-list")
-    people = [
-    "Max Ancheta",
-    "Alonso Asuncion",
-    "Enzo Battung",
-    "Vic Buenvenida",
-    "Kayla Casul",
-    "Athena Catapang",
-    "Cade Chua",
-    "Zyan Eusebio",
-    "Rad Evangelio",
-    "Mara Fado",
-    "Kleiser Fermocil",
-    "Curt Fernando",
-    "Ethan Francia",
-    "Sophia Jimenez",
-    "Javi Mabilog",
-    "AC Mactal",
-    "Lei Magday",
-    "Yanna Moya",
-    "Zoe Mutia",
-    "Luis Nazareno",
-    "Ara Quinto",
-    "Inigo Romero",
-    "Kyler Santos",
-    "Jaedin Sarao",
-    "Briana Sy",
-    "Charlotte Sy",
-    "Jared Udono",
-    "KC Vida"
-]
 
-for i in range(len(people)):
-    print += f"{i+1}.) {people[i]}<br>"
+    people = [
+        "Max Ancheta",
+        "Alonso Asuncion",
+        "Enzo Battung",
+        "Vic Buenvenida",
+        "Kayla Casul",
+        "Athena Catapang",
+        "Cade Chua",
+        "Zyan Eusebio",
+        "Rad Evangelio",
+        "Mara Fado",
+        "Kleiser Fermocil",
+        "Curt Fernando",
+        "Ethan Francia",
+        "Sophia Jimenez",
+        "Javi Mabilog",
+        "AC Mactal",
+        "Lei Magday",
+        "Yanna Moya",
+        "Zoe Mutia",
+        "Luis Nazareno",
+        "Ara Quinto",
+        "Inigo Romero",
+        "Kyler Santos",
+        "Jaedin Sarao",
+        "Briana Sy",
+        "Charlotte Sy",
+        "Jared Udono",
+        "KC Vida"
+    ]
+
+    text = ""
+    for i in range(len(people)):
+        text += f"{i+1}.) {people[i]}<br>"
+
+    output_list.innerHTML = text
