@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Team Checker</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        background-image: url(bg.png);
+        text-align: center;
+    }
+    nav {
+        background-color: green;
+    }
+    #top {
+        width: 520px;
+        height: 300px;
+        background: rgb(255, 227, 185);
+        padding: 20px;
+        margin: 125px auto;
+        border: 1px solid #ccc;
+        outline-style: solid;
+        outline-width: 2.5px;
+        outline-color: forestgreen;
+        box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.8);
+    }
+    select, button {
+        width: 100%;
+        margin-top: 25px;
+    }
+    #output {
+        margin-top: 15px;
+        text-align: center;
+    }
+    h3 {
+        color: forestgreen;
+        text-align: center;
+    }
+    button {
+        background-color: forestgreen;
+        color: beige;
+        padding: 3px;
+        border-radius: 4px;
+    }
+    #output-text {
+        font-weight: bold;
+    }
+    input {
+        width: 500px;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="font-weight: bold;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-graduation-cap"></i> INTRAMURALS SY25-26</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="page2.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Team Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">Players</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container" id="top">
+    <h3>Create Account  </h3>
+
+    <input type="text" placeholder="Username:" id="username"><br><br>
+
+    <input type="text" placeholder="Password:" id="password">
+
+
+    <button py-click="sign_up">Sign Up</button>
+
+    <p id="confirm"></p>
+
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
